@@ -9,7 +9,7 @@ class DumpMethod(IDumpMethod):
 
     def __init__(self, session, timeout, time_between_commands):
         super().__init__(session, timeout, time_between_commands)
-        self.dumper = Dependency("live_dumper", "create_minidump.exe")
+        self.dumper = Dependency("live_dumper", "svchost.exe")
         if self._time_between_commands == 1:
             self._time_between_commands = 10
         if self._timeout == 5:
